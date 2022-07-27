@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "hangman.C": "cpp",
+        "iostream": "cpp"
+    }
+}
