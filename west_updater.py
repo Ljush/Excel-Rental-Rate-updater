@@ -3,14 +3,15 @@ from helpers.column_list_update import col_list_updater
 from helpers.check_date import find_current_month
 
 from leduc_updater import update_min_column, update_max_column, update_vacancy_column, month_difference
-from west.morningside import morningside
-from west.cedarville import cedarville
-from west.west_ed_village import west_village
-from west.cambrian_place import cambrian_place
-from west.village_hamptons import village_hamptons
-from west.webbergreens import webbergreens
-from west.cambridge_west import cambridge_west
-from west.tennyson_apts import tennyson_apts
+from west.west_properties import *
+# from west.morningside import morningside
+# from west.cedarville import cedarville
+# from west.west_ed_village import west_village
+# from west.cambrian_place import cambrian_place
+# from west.village_hamptons import village_hamptons
+# from west.webbergreens import webbergreens
+# from west.cambridge_west import cambridge_west
+# from west.tennyson_apts import tennyson_apts
 '''
 Updating excel sheets with Openpyxl
 https://medium.com/gustavorsantos/how-to-update-excel-using-python-f2d24bab7922
@@ -114,11 +115,12 @@ def update_cambridge(west):
 
 def update_tennyson(west):
     """Realstar -> Tennyson Apts"""
-
+    ten_min, ten_max, ten_vac = tennyson_apts()
     min_ten_xl = ['AC29', 'AC30']
     max_ten_xl = ['AD29', 'AD30']
     vac_ten_xl = ['AE29', 'AE30']
-    tennyson = None
+    tennyson = Property('Tennyson Apts', west, ten_min, ten_max, ten_vac,
+                        min_ten_xl, max_ten_xl, vac_ten_xl)
     auto_updater(tennyson)
     
 def auto_updater(property):
@@ -154,5 +156,5 @@ def west_updater(west):
     update_hamptons(west)
     update_webbergreens(west)
     update_cambridge(west)
-    #update_tennyson(west)
+    update_tennyson(west)
     return

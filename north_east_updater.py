@@ -3,13 +3,14 @@ from helpers.column_list_update import col_list_updater
 from helpers.check_date import find_current_month
 from leduc_updater import update_min_column, update_max_column, update_vacancy_column, month_difference
 
-from north_east.north_haven import north_haven_estates
-from north_east.wyndham_crossing import wyndham_crossing
-from north_east.carmen import carmen
-from north_east.miller_ridge import miller_ridge
-from north_east.greenview import greenview
-from north_east.brintnell_landing import brintnell_landing
-from north_east.stella_place import stella_place
+from north_east.north_east_properties import *
+# from north_east.north_haven import north_haven_estates
+# from north_east.wyndham_crossing import wyndham_crossing
+# from north_east.carmen import carmen
+# from north_east.miller_ridge import miller_ridge
+# from north_east.greenview import greenview
+# from north_east.brintnell_landing import brintnell_landing
+# from north_east.stella_place import stella_place
 '''Updating excel sheets with Openpyxl
 https://medium.com/gustavorsantos/how-to-update-excel-using-python-f2d24bab7922
 https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/

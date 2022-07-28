@@ -1,20 +1,20 @@
 from datetime import datetime
 from helpers.column_list_update import col_list_updater
 from helpers.check_date import find_current_month
-
+from millwoods.millwoods_properties import *
 from leduc_updater import update_min_column, update_max_column, update_vacancy_column, month_difference
-from millwoods.laurel_meadows import laurel_meadows
-from millwoods.laurel_gardens import laurel_gardens
-from millwoods.ridgewood_court import ridgewood_court
-from millwoods.ascot_court import ascot_court
-from millwoods.amblewood_terrace import amblewood_terrace
-from millwoods.leewood_village import leewood_village
-from millwoods.sandstone_pointe import sandstone_pointe
-from millwoods.millcrest_apts import millcrest_apts
-from millwoods.hillview_park import hillview_park
-from millwoods.ridgewood_manor import ridgewood_manor
-from millwoods.ridgewood_park import ridgewood_park
-from millwoods.avalon_court import avalon_court
+# from millwoods.laurel_meadows import laurel_meadows
+# from millwoods.laurel_gardens import laurel_gardens
+# from millwoods.ridgewood_court import ridgewood_court
+# from millwoods.ascot_court import ascot_court
+# from millwoods.amblewood_terrace import amblewood_terrace
+# from millwoods.leewood_village import leewood_village
+# from millwoods.sandstone_pointe import sandstone_pointe
+# from millwoods.millcrest_apts import millcrest_apts
+# from millwoods.hillview_park import hillview_park
+# from millwoods.ridgewood_manor import ridgewood_manor
+# from millwoods.ridgewood_park import ridgewood_park
+# from millwoods.avalon_court import avalon_court
 
 '''Updating excel sheets with Openpyxl
 https://medium.com/gustavorsantos/how-to-update-excel-using-python-f2d24bab7922

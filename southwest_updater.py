@@ -3,18 +3,19 @@ from datetime import datetime
 from helpers.column_list_update import col_list_updater
 from helpers.check_date import find_current_month
 
-from southwest.ashbrookcourt_grabber import ashbrook
-from southwest.fairmont_village import fairmont_village
-from southwest.meadowview_manor import meadowview_manor
-from southwest.southwood_arms import southwood_arms
-from southwest.rideau_place_grabber import rideau_place
-from southwest.pineridge_grabber import pineridge
-from southwest.bluequill_grabber import blue_quill
-from southwest.the_village import the_village
-# from wellington_court import wellington_court # issues with JS in website?
-from southwest.cornerstone import cornerstone_callaghan
-from southwest.portofino import portofino_suites
-from southwest.park_place import park_place_south
+from southwest.southwest_property import *
+# from southwest.ashbrookcourt_grabber import ashbrook
+# from southwest.fairmont_village import fairmont_village
+# from southwest.meadowview_manor import meadowview_manor
+# from southwest.southwood_arms import southwood_arms
+# from southwest.rideau_place_grabber import rideau_place
+# from southwest.pineridge_grabber import pineridge
+# from southwest.bluequill_grabber import blue_quill
+# from southwest.the_village import the_village
+# # from wellington_court import wellington_court # issues with JS in website?
+# from southwest.cornerstone import cornerstone_callaghan
+# from southwest.portofino import portofino_suites
+# from southwest.park_place import park_place_south
 '''
 Updating excel sheets with Openpyxl
 https://medium.com/gustavorsantos/how-to-update-excel-using-python-f2d24bab7922

@@ -2,14 +2,14 @@ from datetime import datetime
 from helpers.column_list_update import col_list_updater
 from helpers.check_date import find_current_month
 from leduc_updater import update_min_column, update_max_column, update_vacancy_column, month_difference
-
-from sherwood_park.tisbury import tisbury
-from sherwood_park.spruce_arms import spruce_arms
-from sherwood_park.stonebridge import stonebridge
-from sherwood_park.greenwood_village import greenwood_village
-from sherwood_park.emerald_hills import emerald_hills
-from sherwood_park.harmony_market import harmony_market
-from sherwood_park.aspen_park import aspen_park
+from sherwood_park.sherwood_park_properties import *
+# from sherwood_park.tisbury import tisbury
+# from sherwood_park.spruce_arms import spruce_arms
+# from sherwood_park.stonebridge import stonebridge
+# from sherwood_park.greenwood_village import greenwood_village
+# from sherwood_park.emerald_hills import emerald_hills
+# from sherwood_park.harmony_market import harmony_market
+# from sherwood_park.aspen_park import aspen_park
 '''Updating excel sheets with Openpyxl
 https://medium.com/gustavorsantos/how-to-update-excel-using-python-f2d24bab7922
 https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/

@@ -2,15 +2,15 @@ from datetime import datetime
 from helpers.column_list_update import col_list_updater
 from helpers.check_date import find_current_month
 from leduc_updater import update_min_column, update_max_column, update_vacancy_column, month_difference
-
-from grande_prairie.gateway import gateway
-from grande_prairie.northgate import northgate
-from grande_prairie.westmore import westmore
-from grande_prairie.lexington import lexington
-from grande_prairie.northland import northland
-from grande_prairie.willowbrook import willowbrook
-from grande_prairie.carrington import carrington
-from grande_prairie.prairie_sunrise import prairie_sunrise
+from grande_prairie.grande_prairie_properties import *
+# from grande_prairie.gateway import gateway
+# from grande_prairie.northgate import northgate
+# from grande_prairie.westmore import westmore
+# from grande_prairie.lexington import lexington
+# from grande_prairie.northland import northland
+# from grande_prairie.willowbrook import willowbrook
+# from grande_prairie.carrington import carrington
+# from grande_prairie.prairie_sunrise import prairie_sunrise
 '''Updating excel sheets with Openpyxl
 https://medium.com/gustavorsantos/how-to-update-excel-using-python-f2d24bab7922
 https://www.geeksforgeeks.org/how-to-automate-an-excel-sheet-in-python/

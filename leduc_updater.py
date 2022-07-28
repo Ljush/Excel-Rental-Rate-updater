@@ -2,15 +2,15 @@ from openpyxl.comments import Comment
 from datetime import datetime
 from helpers.column_list_update import col_list_updater
 from helpers.check_date import find_current_month
-
-from leduc.west_haven import west_haven_terrace
-from leduc.macewan_greens import macewan_greens
-from leduc.bridgewood_apts import bridgewood_apts
-from leduc.leduc_mansion import leduc_mansion
-from leduc.bridgeport_manor import bridgeport_manor
-from leduc.richmond_arms import richmond_arms
-from leduc.unico_apts import unico_apts
-from leduc.edgewood_estates import edgewood_estates
+from leduc.leduc_properties import *
+# from leduc.west_haven import west_haven_terrace
+# from leduc.macewan_greens import macewan_greens
+# from leduc.bridgewood_apts import bridgewood_apts
+# from leduc.leduc_mansion import leduc_mansion
+# from leduc.bridgeport_manor import bridgeport_manor
+# from leduc.richmond_arms import richmond_arms
+# from leduc.unico_apts import unico_apts
+# from leduc.edgewood_estates import edgewood_estates
 '''
 Updating excel sheets with Openpyxl
 https://medium.com/gustavorsantos/how-to-update-excel-using-python-f2d24bab7922

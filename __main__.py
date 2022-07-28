@@ -2,6 +2,7 @@ from openpyxl import load_workbook
 from helpers.verify_OS import current_os
 from helpers.check_date import find_current_month
 from helpers.timer import Timer
+from tkinter import Tk, filedialog
 
 from southwest_updater import *
 from leduc_updater import *
@@ -14,24 +15,31 @@ from grande_prairie_updater import *
 '''
 Openpyxl documentation
 https://openpyxl.readthedocs.io/en/stable/
-check_excel_date(sheet, current_time)
 https://openpyxl.readthedocs.io/en/latest/tutorial.html#loading-from-a-file
 '''
 def main():
     main_timer = Timer()
     current_system = current_os()
-    # Open the excel sheet xlsx
+    root = Tk()
+    root.withdraw()
+    open_file = filedialog.askopenfilename()
+    """root = Tk()
+    root.withdraw()
+    open_file = filedialog.askopenfilename()
+    print('')
+    print(repr(open_file))
+    print('\n')
+    print(open_file)"""
     try:
-        if current_system == 'windows':
-            # windows path to spreadsheet
-            rates = load_workbook(
-                r'K:\projects\Python\competition_Rate_Updater\updater\sheets\comp rates - AB.xlsx')
         if current_system == 'darwin':
-            # MAC OSX path to the spreadsheet
-            rates = load_workbook(
-                '/Users/kieranmarkovic/projects/Python/competition_Rate_Updater/updater/sheets/comp rates - AB.xlsx')
+            # macosx path to sheet
+            rates = load_workbook(open_file)
+        if current_system == 'windows':
+            # windows os
+            rates = load_workbook(open_file)
     except:
-        raise FileExistsError('File not found or your OS is not OSX/Windows.')
+        print('fail lol')
+
 
     # go left to right on individual sheets for spreadsheet; timer posts at end total runtime in seconds.
     leduc = rates['Leduc']
