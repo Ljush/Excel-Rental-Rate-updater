@@ -12,36 +12,41 @@ from downtown_updater import *
 from sherwood_park_updater import *
 from north_east_updater import *
 from grande_prairie_updater import *
-'''
-Openpyxl documentation
+'''Openpyxl documentation
 https://openpyxl.readthedocs.io/en/stable/
-https://openpyxl.readthedocs.io/en/latest/tutorial.html#loading-from-a-file
-'''
+https://openpyxl.readthedocs.io/en/latest/tutorial.html#loading-from-a-file'''
 def main():
     main_timer = Timer()
-    current_system = current_os()
-    root = Tk()
-    root.withdraw()
-    open_file = filedialog.askopenfilename()
-    """root = Tk()
-    root.withdraw()
-    open_file = filedialog.askopenfilename()
-    print('')
-    print(repr(open_file))
-    print('\n')
-    print(open_file)"""
+    current_system = current_os()    
     try:
         if current_system == 'darwin':
-            # macosx path to sheet
+            with open('mac_directories.txt', 'r') as mac_dir:
+                sheets_folder = mac_dir.read()
+            print(sheets_folder)
+            print('\n****SELECT COMPETITION SHEET*****\n')
+            root = Tk()
+            root.withdraw()
+            open_file = filedialog.askopenfilename()
             rates = load_workbook(open_file)
+            
         if current_system == 'windows':
+            with open('windows_directories.txt', 'r') as win_dir:
+                sheets_folder_win = win_dir.read()
+            root = Tk()
+            root.withdraw()
+            open_file = filedialog.askopenfilename()
             # windows os
             rates = load_workbook(open_file)
     except:
-        print('fail lol')
-
-
+        print('*****PLEASE SELECT THE SHEETS FOLDER*****')
+        root_ = Tk()
+        root_.withdraw()
+        foldr = filedialog.askdirectory()
+        
+        
+        
     # go left to right on individual sheets for spreadsheet; timer posts at end total runtime in seconds.
+    return
     leduc = rates['Leduc']
     main_timer.start()
     leduc_updater(leduc)
@@ -76,15 +81,15 @@ def main():
     print('\nGrande Prairie sheet done.\n')
     main_timer.stop()
 
-    current_month, month_int, year_int, month_dict = find_current_month()
+    day_int, month_int, year_int, month_dict = find_current_month()
     # Close and save the excel sheet xlsx
     try:
         if current_system == 'windows':
-            rates.save(r'K:\projects\Python\competition_Rate_Updater\updater\sheets\{} {} - Competition Rates - AB.xlsx'.format(
-                month_dict[month_int], year_int))
+            rates.save(r'{}\{} {}-{} - Competition Rates - AB.xlsx'.format(
+                sheets_folder_win, month_dict[month_int], day_int, year_int))
         if current_system == 'darwin':
             rates.save(
-                '/Users/kieranmarkovic/projects/Python/competition_Rate_Updater/updater/sheets/{} {} - Competition Rates - AB.xlsx'.format(month_dict[month_int], year_int))
+                '{}}/{} {}-{} - Competition Rates - AB.xlsx'.format(sheets_folder, month_dict[month_int], day_int, year_int))
         print('\nCompetition Rate excel sheet saved.\n')
     except:
         raise OSError('Could not save file. Check your file/save directories.')

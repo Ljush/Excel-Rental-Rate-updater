@@ -1,0 +1,1 @@
+/Users/kieranmarkovic/projects/Python/competition_Rate_Updater/updater/sheets

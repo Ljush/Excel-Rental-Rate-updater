@@ -1,3 +1,3 @@
 # readme.md
-
-test test test test
+- Setting up directories
+    Keep your excel sheets in the sheets folder.
