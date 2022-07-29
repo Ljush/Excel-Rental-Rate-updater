@@ -17,7 +17,7 @@ def file_open(OS):
     if OS == 'darwin':
         # open directory txt file to get string of user pathway to sheets folder
         try:
-            with open('mac_directories.txt', 'r') as m:
+            with open('resources/mac_directories.txt', 'r') as m:
                 folder = m.read()
         # otherwise create the txt file and continue as normal
         except:
@@ -33,7 +33,6 @@ def file_open(OS):
     pass
 
 def get_user_input():
-    TK_SILENCE_DEPREACTION = 1
     root = Tk()
     
     root.withdraw()
