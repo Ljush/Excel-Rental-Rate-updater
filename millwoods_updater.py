@@ -180,8 +180,8 @@ def auto_updater(property):
        col_multiplier (int) = int value to use for col_list_updater to update excel list of cells for current column
        available_final(list)= list of excel cells for vacancy to reflect the current month
        min_final/max_final  = lists of excel cells similar to available_final.'''
-    current_month, month_int, year_int, month_dict = find_current_month()
-    time_difference = month_difference(datetime(2022, 4, 1), current_month)
+    current_month, month_int, year_int, month_dict, curr_time = find_current_month()
+    time_difference = month_difference(datetime(2022, 4, 1), curr_time)
     col_multiplier = (5 * time_difference)
 
     # update the list of cells per excel column for current month

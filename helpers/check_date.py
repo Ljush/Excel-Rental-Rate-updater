@@ -12,10 +12,10 @@ def find_current_month():
                         9: 'September', 10: 'October', 11: 'November',
                         12: 'December'}
     date_today = datetime.now()
-    #month_first_day = date_today.replace(
-      #  day=1, hour=0, minute=0, second=0, microsecond=0)
+   # month_first_day = date_today.replace(
+        #day=1, hour=0, minute=0, second=0, microsecond=0)
     month_ = date_today.timetuple()
-    return month_[2], month_[1], month_[0], month_dictionary
+    return date_today, month_[1], month_[0], month_dictionary, date_today
 
 if __name__ == '__main__':
     find_current_month()
