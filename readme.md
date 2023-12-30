@@ -1,20 +1,4 @@
 # readme.md
-- Setting up directories
-    Keep your excel sheets in the sheets folder.
-
-
-"""
-Potential Error that could be raised but likely won't be a real issue:
-UserWarning: Data Validation extension is not supported and will be removed
-  >>> warn(msg)
-
-SO Solution: Excel has a feature called Data Validation 
-(in the Data Tools section of the Data tab in my version) 
-where you can pick from a list of rules to limit the type of 
-data that can be entered in a cell. 
-This is sometimes used to create dropdown lists in Excel. 
-This warning is telling you that this feature is not supported 
-by openpyxl, and those rules will not be enforced. 
-If you want the warning to go away, you can click on the Data 
-Validation icon in Excel, then click the Clear All button to 
-remove all data validation rules and save your workbook."""
+- My first attempt at webscraping and excel sheet automation. Parsing string data and the like from over 50+ websites.
+- I no longer work for this company and keeping up with the weird mistakes that the excel sheet kept adding and removing every month was a task no longer worth my time.
+- The primary thing I learned while working on this project was to think ahead about what I was coding and to improve on implementing code protection. Several tiny modifications to any specific website could cause the respective script to crash so I just handled these crashes by stopping the program and continuing to the next website. Smarter and more efficient string parsing would improve this entire project massively. 
